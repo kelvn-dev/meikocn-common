@@ -1,9 +1,0 @@
-<settings>
-    <servers>
-        <server>
-            <id>meikocn-common</id>
-            <username>${env.USERNAME}</username>
-            <password>${env.TOKEN}</password>
-        </server>
-    </servers>
-</settings>

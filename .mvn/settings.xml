@@ -1,7 +1,7 @@
 <settings>
     <servers>
         <server>
-            <id>meikocn-common</id>
+            <id>meikocn</id>
             <username>${env.USERNAME}</username>
             <password>${env.TOKEN}</password>
         </server>

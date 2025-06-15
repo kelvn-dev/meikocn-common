@@ -27,7 +27,7 @@ jobs:
         run: mvn versions:set -DnewVersion=${{ env.RELEASE_VERSION }}
 
       - name: Publish to GitHub Packages
-        run: mvn deploy --no-transfer-progress
+        run: mvn deploy -s .mvn/settings.xml --no-transfer-progress
         env:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}

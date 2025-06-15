@@ -15,7 +15,7 @@
   <description>meikocn-common</description>
   <distributionManagement>
     <repository>
-      <id>github</id>
+      <id>meikocn-common</id>
       <url>https://maven.pkg.github.com/kelvn-dev/meikocn-common</url>
     </repository>
   </distributionManagement>

@@ -1,8 +1,6 @@
 name: Publish Maven Package
 
 on:
-  push:
-    branches: [main, dev]
   release:
     types: [published]
 
@@ -19,6 +17,14 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Extract version from tag
+        id: extract_version
+        run: |
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Set version in POM
+        run: mvn versions:set -DnewVersion=${{ env.RELEASE_VERSION }}
 
       - name: Publish to GitHub Packages
         run: mvn deploy --no-transfer-progress
